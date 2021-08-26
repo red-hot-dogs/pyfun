@@ -50,7 +50,7 @@ def pyf_remove_numbers(s):
     g=re.split("([0-9]+)",s)
     for i in range(len(g)):
         if g[i].isnumeric():
-            w=not (g[i-1][-1]=='[' and g[i+1][1]==']')
+            w=not (g[i-1][-1]=='[' and g[i+1][0]==']')
             g[i]=pyf_number_w(int(g[i]),w)
     return "".join(g)
 
